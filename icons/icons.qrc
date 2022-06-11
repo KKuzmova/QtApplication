@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>chevron-left.svg</file>
+        <file>film.svg</file>
+        <file>gitlab.svg</file>
+        <file>heart.svg</file>
+        <file>log-out.svg</file>
+        <file>search.svg</file>
+        <file>trash-2.svg</file>
+        <file>tv.svg</file>
+        <file>chevron-right.svg</file>
+        <file>filter.svg</file>
+        <file>check-square.svg</file>
+        <file>square.svg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
