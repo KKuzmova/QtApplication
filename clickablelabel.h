@@ -35,7 +35,7 @@ protected:
 private:
     MovieObject film;
     QStackedWidget* widget;
-
+    void download_finished(QNetworkReply *reply);
 };
 
 #endif // CLICKABLELABEL_H

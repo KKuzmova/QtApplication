@@ -13,12 +13,15 @@
 #include <QLabel>
 #include <QJsonArray>
 #include <QPushButton>
-
+#include <QString>
+#include <QFileInfo>
 #include "clickablelabel.h"
 #include "movieobject.h"
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
+
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -26,12 +29,14 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void downloadFinished(QNetworkReply *reply);
     void search_movies(QNetworkReply *reply);
     void clear_layout(QLayout *layout);
     void create_labels(QNetworkReply *reply, QGridLayout *grid_layout);
+    void load_data();
 
 private slots:
     void on_logo_button_clicked();
@@ -54,6 +59,14 @@ private slots:
 
     void on_search_bar_returnPressed();
 
+    void on_list_box_currentIndexChanged(int index);
+
+    void on_list_box_activated(int index);
+
+    void on_filter_search_button_clicked();
+
+    void on_rating_box_activated(int index);
+
 private:
 
     Ui::MainWindow *ui;
@@ -63,4 +76,6 @@ private:
     QList<QString> label_list_data;
 
 };
+
+
 #endif // MAINWINDOW_H
